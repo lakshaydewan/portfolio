@@ -1,7 +1,7 @@
 export default function INTRO_new({title, subheadin, textArea}) {
 
     return <>
-         <div className='px-24 pt-32 mb-96'>
+         <div className='px-24 pt-32 mb-12'>
     <div className='ml-4 font-medium text-lg text-[#987750]'>
             {title}
       </div>

@@ -2,7 +2,7 @@ export default function GETINTOUCH() {
         
     return (
         <>
-            <div className='px-24 pt-32 mb-96'>
+            <div className='px-24 pt-32 mb-12'>
     <div className='ml-4 font-medium text-lg text-[#987750]'>
          CONTACT
       </div>
@@ -34,9 +34,6 @@ export default function GETINTOUCH() {
 </>
     )
 }
-"CONTACT"
-"Get In Touch"
-""
 // const a = padding-left: 253px;
 // padding-right: 301px;
 // margin-right: 31px;

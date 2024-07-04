@@ -9,7 +9,7 @@ export default function INTRO({title, subheadin, textArea}) {
     <>
         <div className='px-24 pt-32 mb-96'>
     <motion.div 
-    onViewportEnter={()=> {
+    onViewportEnter={() => {
       console.log("entered !!111")
       setWidth("w-7/12");
     }}
@@ -24,7 +24,7 @@ export default function INTRO({title, subheadin, textArea}) {
         <div className='mt-8 ml-4 text-left font-normal text-2xl text-[#888]'>
           <p>{textArea}</p>
         </div>
-        </div>    
+        </div>   
     </>
     )
 }

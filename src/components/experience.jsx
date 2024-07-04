@@ -2,14 +2,15 @@ import { useRecoilState } from "recoil"
 import { flipperState } from "../recoil/atoms";
 import { motion } from 'framer-motion';
 import Wrapper from "./wrapper";
+import { delay } from "lodash";
 
 
 export default function Experience_Boxes() {
     const [flipper, setFlipper] = useRecoilState(flipperState);
     
     const variants = {
-        hidden: { opacity: 0, x: -100 },
-        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, rotateY:60, rotate: -5},
+        visible: { opacity: 1,rotateY:0, rotate: 0}
       };
 
     return <>
@@ -34,7 +35,8 @@ export default function Experience_Boxes() {
                     initial="hidden"
                     animate="visible"
                     variants={variants}
-                    transition={{ duration: 1.3, ease: "easeInOut" }}>
+                    // delay={1}
+                    transition={{ duration: 1.5, ease: "easeInOut"}}>
                     <Wrapper title={"ranss"}></Wrapper>
                     <Wrapper title={"ranss"}></Wrapper>
                     <Wrapper title={"ranss"}></Wrapper>
@@ -45,7 +47,7 @@ export default function Experience_Boxes() {
                     initial="hidden"
                     animate="visible"
                     variants={variants}
-                    transition={{ duration: 1.3, ease: "easeInOut" }}>
+                    transition={{ duration: 1.5, ease: "easeInOut" }}>
                     <Wrapper title={"ranss"}></Wrapper>
                     <Wrapper title={"ranss"}></Wrapper>
                     <Wrapper title={"ranss"}></Wrapper>
@@ -56,7 +58,7 @@ export default function Experience_Boxes() {
                     initial="hidden"
                     animate="visible"
                     variants={variants}
-                    transition={{ duration: 1.3, ease: "easeInOut" }}>
+                    transition={{ duration: 1.7, ease: "easeInOut" }}>
                     <Wrapper title={"ranss"}></Wrapper>
                     <Wrapper title={"ranss"}></Wrapper>
                     <Wrapper title={"ranss"}></Wrapper>

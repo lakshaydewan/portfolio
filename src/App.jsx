@@ -7,7 +7,6 @@ import Experience_Boxes from './components/experience'
 import Footer from './components/footer'
 import MenuBar from './components/menubar'
 import './App.css'
-import { motion } from 'framer-motion'
 import { useRecoilState } from 'recoil'
 import { widthState } from './recoil/atoms'
 
@@ -15,25 +14,16 @@ import { widthState } from './recoil/atoms'
 function App() {
   const [width, setWidth] = useRecoilState(widthState);
 
-  const handleViewportEnter = () => {
-      console.log("entered");
-      setWidth("w-8/12");
-  };
-
   return (
     <>
     <div className='h-fit flex bg-[#1d1b19] overflow-scroll'>
           <div className={`h-fit ${width} bg-[#1d1b19] border-[1px] border-[#4a4947] transition-all duration-1000 ease-in-out`}>
         <INTRO title={"INTRODUCTION"} subheadin={"UI/UX Designer"} textArea={"I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores."}></INTRO>
-        <motion.div
-          onViewportEnter={handleViewportEnter}  
-        >
           <BIOGRAPHY></BIOGRAPHY>
           <INTRO_new title={"SERVICES"} subheadin={"What I Do"} textArea={"I help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers and growing overall sales."}></INTRO_new>
           <GETINTOUCH></GETINTOUCH>
           <Experience_Boxes/>
           <Footer></Footer>
-        </motion.div>
       </div> 
         <MenuBar></MenuBar>
         <NAVBAR></NAVBAR>
