@@ -6,6 +6,7 @@ import NAVBAR from './components/navbar'
 import Experience_Boxes from './components/experience'
 import Footer from './components/footer'
 import MenuBar from './components/menubar'
+import Projects from './components/Projects'
 import './App.css'
 import { useRecoilState } from 'recoil'
 import { widthState } from './recoil/atoms'
@@ -16,14 +17,15 @@ function App() {
 
   return (
     <>
-    <div className='h-fit flex bg-[#1d1b19] overflow-scroll'>
+    <div className='h-fit flex bg-[#1d1b19] overflow-scroll font-serif'>
           <div className={`h-fit ${width} bg-[#1d1b19] border-[1px] border-[#4a4947] transition-all duration-1000 ease-in-out`}>
         <INTRO title={"INTRODUCTION"} subheadin={"UI/UX Designer"} textArea={"I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores."}></INTRO>
           <BIOGRAPHY></BIOGRAPHY>
           <INTRO_new title={"SERVICES"} subheadin={"What I Do"} textArea={"I help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers and growing overall sales."}></INTRO_new>
-          <GETINTOUCH></GETINTOUCH>
           <Experience_Boxes/>
-          <Footer></Footer>
+          <GETINTOUCH></GETINTOUCH>
+          <Projects></Projects>
+          <Footer></Footer> 
       </div> 
         <MenuBar></MenuBar>
         <NAVBAR></NAVBAR>

@@ -21,12 +21,12 @@ export default function NAVBAR() {
             <div className="fixed top-0 right-0 mt-10 mr-10 hover:border-[#987750] flex items-center justify-center w-[50px] h-[50px] p-0" onClick={() => {
                 setisMenuopen(!isMenuOpen);
             }}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-16 h-12 text-[#888] border-[#987750] hover:size-8 hover:stroke-1 hover:border hover:border-[#987750] hover:text-[#987750] transition-all duration-700 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-16 h-12 text-[#888] border-[#987750] hover:size-8 hover:stroke-1 hover:border hover:border-[#987750] hover:text-[#987750] transition-all duration-500 ease-in-out">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
         </div>
         <div className='bg-[#181715] mr-32'>
-                <div className='mb-6 text-[#888888] font-extrabold mb-12'>
+                <div className='text-[#888888] font-extrabold mb-12'>
                     MENU
                 </div>
                 {
@@ -36,49 +36,49 @@ export default function NAVBAR() {
                         initial="hidden"
                         animate="visible"
                         variants={variants}
-                        transition={{ duration: 1, delay:1 }}> 
+                        transition={{ duration: 0.8, delay:1 }}> 
                         Home
                     </motion.div>
                     <motion.div className='text-[#dddddd] text-3xl font-normal'
                         initial="hidden"
                         animate="visible"
                         variants={variants}
-                        transition={{ duration: 1, delay:1.2 }}> 
+                        transition={{ duration: 0.8, delay:1.2 }}> 
                         About
                     </motion.div>
                     <motion.div className='text-[#dddddd] text-3xl font-normal'
                         initial="hidden"
                         animate="visible"
                         variants={variants}
-                        transition={{ duration: 1, delay:1.4 }}> 
+                        transition={{ duration: 0.8, delay:1.4 }}> 
                         Portfolio
                     </motion.div>
                     <motion.div className='text-[#dddddd] text-3xl font-normal'
                         initial="hidden"
                         animate="visible"
                         variants={variants}
-                        transition={{ duration: 1, delay:1.6 }}> 
+                        transition={{ duration: 0.8, delay:1.6 }}> 
                         Services
                     </motion.div>
                     <motion.div className='text-[#dddddd] text-3xl font-normal'
                         initial="hidden"
                         animate="visible"
                         variants={variants}
-                        transition={{ duration: 1, delay:1.8 }}> 
+                        transition={{ duration: 0.8, delay:1.8 }}> 
                         News and Tips
                     </motion.div>
                     <motion.div className='mb-32 text-[#dddddd] text-3xl font-normal'
                         initial="hidden"
                         animate="visible"
                         variants={variants}
-                        transition={{ duration: 1, delay:2 }}> 
+                        transition={{ duration: 0.8, delay:2 }}> 
                         Contact
                     </motion.div>
                     <motion.div
                     initial="hidden"
                     animate="visible"
                     variants={variants_bottom}
-                    transition={{ duration: 1, delay:2.4 }}
+                    transition={{ duration: 0.8, delay:2.4 }}
                     className='mb-2'
                     >
                         <div className='flex items-center justify-start gap-4'>
@@ -103,12 +103,18 @@ export default function NAVBAR() {
                     transition={{ duration: 1, delay:2.5 }}
                     className='text-[#888]'
                     >
-                        Developed by Trendy coder
+                        Developed by <span>
+                            TrendyCoder
+                        </span>
                     </motion.div>
             </div>
                         </>) : (
                         <>
-                        <div className='mb-6 flex flex-col gap-3'>
+                        <motion.div 
+                        initial={{opacity:1}}
+                        animate={{opacity:0}}
+                        transition={{duration: 0.8}}
+                        className='mb-6 flex flex-col gap-3'>
                         <div className='text-[#dddddd] text-3xl font-normal'> 
                         Home
                     </div>
@@ -144,9 +150,11 @@ export default function NAVBAR() {
                         </div>
                     </div>
                     <div className='text-[#888]'>
-                        Developed by Trendy coder
+                        Developed by <span>
+                            TrendyCoder
+                        </span>
                     </div>
-            </div>
+            </motion.div>
                         </>
                     )
                 }

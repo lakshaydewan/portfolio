@@ -14,3 +14,8 @@ export const widthState = atom({
   key: "widthState", 
   default: "w-7/12"
 })
+
+export const dynamic_css = atom({
+  key: "dynamic_css",
+  default: "focus-within-underline"
+})

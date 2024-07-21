@@ -9,7 +9,6 @@ export default function Footer() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
             </svg>
         </div>
-            
             <div className="h-[1px] w-48 bg-[#4a4947]">
                 
             </div>
@@ -18,8 +17,10 @@ export default function Footer() {
             <div className="text-[#888] ml-32">
             Copyright © 2024. All rights reserved.
             </div>
-            <div className="text-[#888] ml-32">
-            Developed by TrendyCoder
+            <div className="text-[#888] ml-32 cursor-pointer">
+            Developed by <span className="text-white border-b boder-b-[1px] font-light">
+                TrendyCoder
+            </span>
             </div>
         </div>
     </>
